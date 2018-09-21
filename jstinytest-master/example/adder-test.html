@@ -53,6 +53,9 @@ tests({
 	forEach(testArray, function(number, index, originalArray) {
 	  eq(originalArray, testArray);
 	});
-   }
+   },
+  'It should accept a configurable this object.': function() {
+    forEach([1], function() {}, {});
+  } 
 });
 </script>
